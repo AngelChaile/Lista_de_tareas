@@ -1,19 +1,44 @@
-// Obtener referencia al botón de agregar por su id
-let addButton = document.getElementById("addButton");
+const input = document.querySelector('input');
+const btnAdd = document.querySelector('.btn-add');
+const ul = document.querySelector('ul');
+const msg = document.querySelector(".empty");
 
-// Agregar un evento de clic al botón de agregar
-addButton.addEventListener("click", agregarTarea);
 
-function agregarTarea() {
-  let input = document.getElementById("taskInput");
-  let tarea = input.value;
-
+btnAdd.addEventListener("click", (e) =>{
+  e.preventDefault();
+  const tarea = input.value;
+  
   if (tarea !== "") {
-    let lista = document.getElementById("taskList");
-    let elementoLista = document.createElement("li");
-    elementoLista.innerText = tarea;
-    lista.appendChild(elementoLista);
-
+    
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    
+    p.textContent = tarea;
+    
+    li.appendChild(p);
+    li.appendChild(addDeleteBtn());
+    ul.appendChild(li);
+    
     input.value = "";
+    msg.style.display = "none";
   }
+})
+
+function addDeleteBtn() {
+  const btnDelete = document.createElement("button");
+
+  btnDelete.textContent = "X";
+  btnDelete.className = "btn-delete";
+
+  btnDelete.addEventListener("click", (e) => {
+    const item = e.target.parentElement;
+
+    ul.removeChild(item);
+
+    const items = document.querySelectorAll("li");
+    if (items.length == 0) {
+      msg.style.display = "block";
+    }
+  })
+  return btnDelete;
 }

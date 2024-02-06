@@ -2,40 +2,35 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <style>
-        div{
-          width: 600px;
-          height: 600px;
-          margin: auto;
-         padding-top: 10%;
-        }       
-        #taskInput {
-          margin-bottom: 10px;
-          padding: 8px;
-        }
-        #addButton{
-          padding: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div>
-    <input type="text" id="taskInput" placeholder="Ingrese una tarea">
-    <button id="addButton">Agregar</button>
-  
+  <div class="container">
     <h1>Lista de Tareas</h1>
 
-      <ul id="taskList">
+    <div class="search">
+      <form>
+        <input type="text" placeholder="Ingrese una tarea">
+        <button class="btn-add">Agregar</button>
+      </form>
+    </div>
 
+    <div class="li-container">
+      <ul>
       </ul>
-  </div>
-  
-    <script src="main.js"></script>
-</body>
+    </div>
 
+    <div class="empty">
+      <p>NO TIENES TAREAS PENDIENTES</p>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>
