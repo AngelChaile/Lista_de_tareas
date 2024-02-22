@@ -27,7 +27,7 @@ btnAdd.addEventListener("click", (e) =>{
 function addDeleteBtn() {
   const btnDelete = document.createElement("button");
 
-  btnDelete.textContent = "X";
+  btnDelete.textContent = "🗑️";
   btnDelete.className = "btn-delete";
 
   btnDelete.addEventListener("click", (e) => {

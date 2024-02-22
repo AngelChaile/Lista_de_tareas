@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     background-color: lightseagreen;
@@ -16,7 +16,7 @@ body {
   .container {
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 30%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -36,7 +36,7 @@ body {
   input {
     padding: 15px 10px;
     outline: none;
-    width: 350%;
+    width: 100%;
   }
   
   .li-container {
@@ -74,7 +74,7 @@ body {
     outline: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    width: 10%;
+    width: 20%;
     font-size: 1.2em;
   }
   
@@ -99,8 +99,24 @@ body {
   }
   
   .empty {
-    color: rgb(59, 56, 56);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    /* color: darkslategrey; */
+    color: rgb(113 100 100); 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold; 
+    text-align: center; 
+    margin-top: 10px; 
+  }
+
+  .empty::after {
+    content: "😊"; /* Unicode para el emoji de una carita sonriente */
+    font-size: 24px; /* Tamaño del emoji */
+    margin-left: 3px; /* Espaciado entre el texto y el emoji */
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    /* Cambios específicos para pantallas más pequeñas (ej. tablet, móvil) */
+    .container {
+      width: 100%;
+    }
   }
