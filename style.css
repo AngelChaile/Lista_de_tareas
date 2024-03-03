@@ -108,14 +108,13 @@ body {
   }
 
   .empty::after {
-    content: "😊"; /* Unicode para el emoji de una carita sonriente */
-    font-size: 24px; /* Tamaño del emoji */
-    margin-left: 3px; /* Espaciado entre el texto y el emoji */
+    content: "😊"; 
+    font-size: 24px; 
+    margin-left: 3px; 
   }
   
-  
   @media screen and (max-width: 768px) {
-    /* Cambios específicos para pantallas más pequeñas (ej. tablet, móvil) */
+    /* Cambios específicos para pantallas más pequeñas */
     .container {
       width: 100%;
     }
